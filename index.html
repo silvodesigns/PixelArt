@@ -2,26 +2,35 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+     <link rel="icon" href="pixelArt.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
+    <div id="header">
+        <img src="pixelArt.png"/>
+        <h1>Lab: Pixel Art Maker</h1>
+    </div>
+    <div id="wrap">
+        <div id="settings">
+             <h4>Choose Grid Size</h4>
+                <form id="sizePicker">
+                    <p>Grid Height:</p>
+                    <input type="number" id="input_height" name="height" min="1" value="1">
+                    <p>Grid Width:</p>
+                    <input type="number" id="input_width" name="width" min="1" value="1">
+                    <input type="submit" value="Create">
+                </form>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
+            <p>Pick A Color</p>
+            <input type="color" id="colorPicker">
+    </div>
+        <div id="canvas">
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
-
-    <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
+            <h4>Design Canvas</h4>
+            <table id="pixel_canvas"></table>
+        </div>
+    </div>
 
     <script src="designs.js"></script>
 </body>
